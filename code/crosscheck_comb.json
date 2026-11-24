@@ -1,0 +1,21 @@
+{
+ "kind": "floating point implementation check, not a proof",
+ "tiers": {
+  "622": {
+   "cells": 1024,
+   "max_abs_diff_per_cell": 0.00441839553,
+   "float_sup": 0.982889968,
+   "certified_sup": 0.982920043,
+   "cells_float_above_certified": 0,
+   "float_below_one": true
+  },
+  "711": {
+   "cells": 1024,
+   "max_abs_diff_per_cell": 0.000236761929,
+   "float_sup": 0.934976288,
+   "certified_sup": 0.935008561,
+   "cells_float_above_certified": 0,
+   "float_below_one": true
+  }
+ }
+}

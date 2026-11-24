@@ -14,7 +14,7 @@ header-includes:
   - \renewcommand{\thetheorem}{\Alph{theorem}}
 ---
 
-**Abstract.** Let $c_n=\lambda_{n+1}-2\lambda_n+\lambda_{n-1}$ be the second differences of the Li coefficients $\lambda_n$. It is known unconditionally that $c_n$ changes sign infinitely often, with $c_1,\dots,c_{117}>0>c_{118}$. We study how long a run of one sign can be and how often the sign changes; all results on these questions are conditional. Assuming the Riemann hypothesis (RH), we prove that every window of $1573$ consecutive indices contains both a positive and a negative $c_n$, so every run of one sign has length at most $1572$; and that each sign has runs of length at least $312$, with positive lower density. Assuming RH and a linear independence hypothesis on the angles $\theta_k=2\arctan(1/(2\gamma_k))$ of the first $700$ zeros $\tfrac12+i\gamma_k$, runs of $392$ consecutive positive values, and of $392$ negative values, occur with positive lower density; with the first $1400$ zeros, runs of $476$. Assuming RH and the independence of $\pi$ and all $\theta_k$ over $\mathbb{Q}$, counted with multiplicity, the sign changes of $c_n$ have a density $\delta$, and $\delta/(\theta_1/\pi)$ lies in $[0.969481285147,\,0.971027176735]$, in particular below $1$. The constants in the theorems are verified in ball arithmetic, and the code is public.
+**Abstract.** Let $c_n=\lambda_{n+1}-2\lambda_n+\lambda_{n-1}$ be the second differences of the Li coefficients $\lambda_n$. It is known unconditionally that $c_n$ changes sign infinitely often, with $c_1,\dots,c_{117}>0>c_{118}$. We study how long a run of one sign can be and how often the sign changes; all results on these questions are conditional. Assuming the Riemann hypothesis (RH), we prove that every window of $622$ consecutive indices contains both a positive and a negative $c_n$, so every run of one sign has length at most $621$ (computer-assisted, using RH and a certified list of zeros, nothing else); and that each sign has runs of length at least $312$, with positive lower density. Assuming RH and a linear independence hypothesis on the angles $\theta_k=2\arctan(1/(2\gamma_k))$ of the first $700$ zeros $\tfrac12+i\gamma_k$, runs of $392$ consecutive positive values, and of $392$ negative values, occur with positive lower density; with the first $1400$ zeros, runs of $476$. Assuming RH and the independence of $\pi$ and all $\theta_k$ over $\mathbb{Q}$, counted with multiplicity, the sign changes of $c_n$ have a density $\delta$, and $\delta/(\theta_1/\pi)$ lies in $[0.969481285147,\,0.971027176735]$, in particular below $1$. The constants in the theorems are verified in ball arithmetic, and the code is public.
 
 ```{=latex}
 \begingroup\small
@@ -40,7 +40,7 @@ $$
 **Hypotheses.** We use the following.
 
 - **RH.** Every nontrivial zero of $\zeta$ has real part $\tfrac12$.
-- **LI$_\theta(K)$.** The numbers $\pi,\theta_1,\dots,\theta_K$ are linearly independent over $\mathbb{Q}$, where $\theta_1,\dots,\theta_K$ belong to the first $K$ ordinates (identified in Lemma \ref{lem:zeros}).
+- **LI$_\theta(K)$.** The numbers $\pi,\theta_1,\dots,\theta_K$ are linearly independent over $\mathbb{Q}$, where $\theta_1,\dots,\theta_K$ belong to the first $K$ ordinates (identified in Lemma \ref{lem:zeros}, part (b)).
 - **LI$_\theta$ (with multiplicity).** The numbers $\pi,\theta_1,\theta_2,\dots$, with $\theta_k$ listed with multiplicity (every copy of a multiple zero counted), are linearly independent over $\mathbb{Q}$. This forces every zero to be simple.
 
 LI$_\theta$ is a hypothesis on the angles $\theta_k$. It is not the usual linear independence hypothesis on the ordinates $\gamma_k$, and we found no source that derives either from the other. It is open.
@@ -51,7 +51,7 @@ By a certificate we mean archived exact data (rationals or balls) together with 
 
 | Result | Statement | Hypotheses |
 |-----------------|--------------------------------------|-----------------|
-| Theorem A | every window of $1573$ consecutive $n$ has both signs; runs have length $\le1572$ | RH |
+| Theorem A | every window of $622$ consecutive $n$ has both signs; runs have length $\le621$ | RH |
 | Theorem B | runs of length at least $312$ of each sign, of positive lower density | RH |
 | Theorem C | runs of $392$ (positive and negative) with lower density $\ge(r/\pi)^{700}$, $r\ge9.45\cdot10^{-4}$; runs of $476$ with $K=1400$ | RH and LI$_\theta(700)$; RH and LI$_\theta(1400)$ |
 | Theorem D | density $\delta$ of sign changes exists; the ratio $\delta/(\theta_1/\pi)$ lies in $[0.969481285147,0.971027176735]$ | RH and LI$_\theta$ with multiplicity |
@@ -95,7 +95,13 @@ Li's formula $\lambda_n=\sum_\rho[1-(1-1/\rho)^n]$ [3, §1] gives $c_n=\sum_\rho
 ```{=latex}
 \begin{lemma}[computer-assisted]\label{lem:zeros}
 ```
-There are exactly $2000$ zeros of $\zeta$ with $0<\gamma\le T$, $T=2638142521/2^{20}\approx2515.93$. All lie on the critical line and all are simple. The ordinates $\gamma_1<\dots<\gamma_{2000}$ are enclosed by the balls in the certificate, with $\gamma_{2000}=2515.286\ldots$. The count rests on Arb's implementation of $N(T)$ being correct.
+Let $T=2638142521/2^{20}\approx2515.93$ and let $\mu_1<\dots<\mu_{2000}$ be the $2000$ stored midpoints.
+
+(a) For each $k$, Hardy's function $Z$ has strictly opposite signs at $\mu_k-2^{-20}$ and $\mu_k+2^{-20}$. The intervals $I_k=[\mu_k-2^{-20},\mu_k+2^{-20}]$ are pairwise disjoint and lie in $(0,T)$. So each $I_k$ contains an ordinate $\gamma$ of a zero of $\zeta$ on the critical line, of odd multiplicity.
+
+(b) There are exactly $2000$ zeros of $\zeta$ with $0<\gamma\le T$. All lie on the critical line and all are simple. The ordinates $\gamma_1<\dots<\gamma_{2000}$ are enclosed by the balls in the certificate, with $\gamma_{2000}=2515.286\ldots$, and $\gamma_k\in I_k$.
+
+Part (a) rests on Arb's evaluation of $\zeta$ and $\log\Gamma$. Part (b) also rests on Arb's implementation of the count $N(T)$ being correct.
 
 ```{=latex}
 \end{lemma}
@@ -110,19 +116,21 @@ certificate: papers/keiper-li-sign-runs/code/z2000.json
 ```{=latex}
 \begin{proof}
 ```
-Arb [4] isolates the first $2000$ zeros in ball arithmetic (python-flint $0.9.0$); the zeros are returned on the line and their count and order are checked. Independently of Arb's isolation, Hardy's function $Z$ has a certified sign change on $[\gamma-2^{-20},\gamma+2^{-20}]$ for each listed zero, and these intervals are disjoint. That gives at least $2000$ zeros of odd multiplicity on the line, in disjoint intervals. Arb's count of zeros up to $T$, with multiplicity, returns $2000$. This count uses Turing's method as made explicit by Lehman [10], Brent [11] and Trudgian [12, Thm 2.1 and Cor 2.3 of the arXiv version, arXiv:0903.1885] (a bound on the integral of $S(t)$), going back to Turing's method [20]. The Arb count is a computation that this paper trusts, not an independent certificate. So each of these zeros is simple and there are no others up to $T$.
+Part (a). In ball arithmetic, $Z$ has a certified sign change on $[\mu_k-2^{-20},\mu_k+2^{-20}]$ for each $k$ (this is checked for all $2000$ intervals), and the intervals are checked to be disjoint and to lie in $(0,T)$. A sign change of $Z$ gives a zero of $\zeta(\tfrac12+it)$ of odd multiplicity inside the interval.
+
+Part (b). Arb [4] isolates the first $2000$ zeros in ball arithmetic (python-flint $0.9.0$); the zeros are returned on the line and their count and order are checked. Arb's count of zeros up to $T$, with multiplicity, returns $2000$. This count uses Turing's method as made explicit by Lehman [10], Brent [11] and Trudgian [12, Thm 2.1 and Cor 2.3 of the arXiv version, arXiv:0903.1885] (a bound on the integral of $S(t)$), going back to Turing's method [20]. The Arb count is a computation that this paper trusts, not an independent certificate. By part (a) there are at least $2000$ zeros of odd multiplicity in the disjoint intervals $I_k$, and the count is $2000$ with multiplicity, so each of these zeros is simple, lies in its $I_k$, and there are no others up to $T$.
 ```{=latex}
 \end{proof}
 ```
 
-Every theorem that uses the zero list inherits the assumption that Arb's count is correct.
+Theorems B, C, D and D$'$, and the hypotheses LI$_\theta(K)$, use part (b), so they inherit the assumption that Arb's count is correct. Theorem A uses only part (a).
 
 # A window bound under RH
 
 ```{=latex}
 \begin{theorem}[computer-assisted]\label{thm:A}
 ```
-Assume RH. Every window of $1573$ consecutive indices $n\ge1$ contains an $n$ with $c_n>0$ and an $n$ with $c_n<0$. Hence every run of $c_n$ of one sign has length at most $1572$.
+Assume RH. Every window of $622$ consecutive indices $n\ge1$ contains an $n$ with $c_n>0$ and an $n$ with $c_n<0$. Hence every run of $c_n$ of one sign has length at most $621$.
 
 ```{=latex}
 \end{theorem}
@@ -131,50 +139,68 @@ Assume RH. Every window of $1573$ consecutive indices $n\ge1$ contains an $n$ wi
 <!-- statement
 id: TA
 label: CONDITIONAL
-certificate: papers/keiper-li-sign-runs/code/cert_L1699.json, papers/keiper-li-sign-runs/code/cert_L1573.json, papers/keiper-li-sign-runs/code/z2000.json
+certificate: papers/keiper-li-sign-runs/code/cert_comb_622.json, papers/keiper-li-sign-runs/code/cert_comb_711.json, papers/keiper-li-sign-runs/code/z2000.json
 -->
 
-**Hypotheses:** RH. The zero list of Lemma \ref{lem:zeros} is used.
+**Hypotheses:** RH. Part (a) of Lemma \ref{lem:zeros} is used. Arb's count $N(T)$, simplicity of zeros and LI$_\theta$ are not used.
 
-**Context.** Under RH some finite window bound follows from general facts about almost periodic sequences with mean zero; the contribution here is the explicit constant $1573$ with an exact certificate. Sketch of the soft bound (not used below): since $\sum_\rho w_\rho<\infty$ the series for $c_n$ converges uniformly, so $(c_n)$ is a Bohr almost periodic sequence, and its mean is $0$ because all $\theta_k\ne0$. If windows of one sign of every length existed, a limit of translates (an element of the hull) would be $\ge0$ (or $\le0$) with mean $0$, hence identically $0$, whereas every element of the hull has the same mean of $|c_n|$ as $c_n$, which is positive. Haraux [15, Thm 2.1] is only the continuous-time analogue: a real-valued almost periodic function with mean zero, not identically zero, takes both signs on every interval of some uniform length. It does not cover integer sampling or density.
+**Context.** Under RH some finite window bound follows from general facts about almost periodic sequences with mean zero; the contribution here is the explicit constant $622$ with an exact certificate. Sketch of the soft bound (not used below): since $\sum_\rho w_\rho<\infty$ the series for $c_n$ converges uniformly, so $(c_n)$ is a Bohr almost periodic sequence, and its mean is $0$ because all $\theta_k\ne0$. If windows of one sign of every length existed, a limit of translates (an element of the hull) would be $\ge0$ (or $\le0$) with mean $0$, hence identically $0$, whereas every element of the hull has the same mean of $|c_n|$ as $c_n$, which is positive. Haraux [15, Thm 2.1] is only the continuous-time analogue: a real-valued almost periodic function with mean zero, not identically zero, takes both signs on every interval of some uniform length. It does not cover integer sampling or density.
 
 ```{=latex}
 \begin{proof}
 ```
-The proof combines Lemma \ref{lem:kernel} with a certified inequality (the certificate, detailed in Appendix A). Let $L\in\{1573,1699\}$ ($1573$ gives the theorem; $1699$ is also certified, with margin $5.92\%$), $L=2h+1$ ($h=786$ and $h=849$), and let $K_d=K_{-d}\ge0$ be the stored kernel (integer numerators over $2^{50}$). In ball arithmetic ($128$ bits, python-flint $0.9.0$) the inequality
+The method is a nonnegative combination (a "comb": the weighted sum of $c_n$ at seven consecutive trough points of the first zero) of seven values of $c_n$, taken near consecutive troughs of the cosine of the first listed zero (or near consecutive crests). If $c_n\ge0$ on the window, the combination is $\ge0$. The first zero contributes a negative term of fixed size, and the other terms are bounded without any information about their phases. The certificate shows that the bound on the sum of these terms is smaller than the term of the first zero. This is Lemma \ref{lem:comb} (Appendix A) with $M=7$; what remains is its hypothesis, checked for every $u\in[0,1]$ in ball arithmetic ($128$ bits, python-flint $0.9.0$).
+
+*The listed zeros.* By Lemma \ref{lem:zeros}(a), the $2000$ intervals $I_k=[\mu_k-2^{-20},\mu_k+2^{-20}]$ are pairwise disjoint and each contains an ordinate $\gamma_k$. The certificate rechecks the signs of Hardy's $Z$ at both endpoints of every $I_k$ itself, and uses the interval $I_k$, of radius $2^{-20}$, as the ball enclosing $\gamma_k$; it calls no zero-finding routine. So $\theta_k$ and $w_k$ are balls, and the first listed zero has $P_1=2\pi/\theta_1=88.8481\ldots$. Any other zero, wherever it lies (for instance above $T$, inside some $I_k$, between the intervals, or a repeated copy of a listed one), belongs to the remainder of Lemma \ref{lem:tail}. In particular the count $N(T)$ and the simplicity of zeros are not used. The weight of the rest is $T_{2000}=C-2\sum_{k\le2000}w_k$. Each $\gamma_k$ is known only to within $2^{-20}$, so the certificate takes for $W$ the upper end of a ball containing $T_{2000}$. Hence $W\ge T_{2000}$, and $W\le8.8468\cdot10^{-4}$.
+
+*The weights.* The weight vector is $a=(a_0,\dots,a_6)/2^{50}$ with
 $$
-w_1\tilde k(0)>(\text{the three sums of Lemma \ref{lem:kernel} over the }2000\text{ listed zeros})+W\,\tilde k(0)(1+\mu_{\mathrm{arc}})
+\begin{aligned}
+(a_0,\dots,a_3)&=(99979911727625,\,175978155439502,\,195681403809248,\,183071324852610),\\
+(a_4,a_5,a_6)&=(195568813818563,\,175752975458133,\,99979911727625),
+\end{aligned}
 $$
-holds, where $\mu_{\mathrm{arc}}$ is a certified upper bound for $\sup|\tilde k|/\tilde k(0)$ on the arc of the unlisted zeros (defined in Appendix A), with value $0.0027457$ for $L=1573$ and $0.0023355$ for $L=1699$, and $W=0.0008846762129$ (ball) is the weight of the unlisted zeros and $w_1=0.004998988834$. Write $R$ for the ratio of the right side to the left side. The certificate gives $R\le0.9983759146$ for $L=1573$ (margin $0.16\%$) and $R\le0.9407685236$ for $L=1699$ (margin $5.92\%$); both inequalities are verified rigorously, so the size of the margin plays no role. Now suppose a window $n_0,\dots,n_0+L-1$ with $n_0\ge1$ had $c_n\ge0$ throughout, or $c_n\le0$ throughout. Put $M=n_0+h\ge h+1$. By Lemma \ref{lem:kernel}, $w_1\tilde k(0)$ is at most the three sums over all zeros. The listed zeros contribute the same terms as in the certificate, and the unlisted zeros (all with $\gamma>T$, Lemma \ref{lem:zeros}) contribute at most $W\tilde k(0)(1+\mu_{\mathrm{arc}})$ (derivation in Appendix A). So $w_1\tilde k(0)\le R\,w_1\tilde k(0)<w_1\tilde k(0)$, a contradiction. Hence every window of $1573$ consecutive indices has $c_n<0$ for some $n$ and $c_n>0$ for some $n$. A run of one sign of length $1573$ would be such a window, so every run has length at most $1572$. The ratio is above $1$ for $L=1571$ ($1.0001440$) and $L=1551$ ($1.0148752$) (archived log), so $1573$ is the smallest length found for which this kernel certifies; it is not a limit of the method.
+approximately $(0.0888,0.1563,0.1738,0.1626,0.1737,0.1561,0.0888)$. The same vector is used for every $u$. It was found by a floating point minimax search, which is not part of the proof: Lemma \ref{lem:comb} holds for every nonnegative vector, and only these seven integers enter the certificate.
+
+*The window.* The certificate checks in balls that $7P_1\le621.9370\le622$, which is the hypothesis $L\ge MP_1$ of Lemma \ref{lem:comb} for $L=622$.
+
+*The cover of $u$.* The interval $[0,1]$ is tiled by the $1024$ cells $[i/1024,(i+1)/1024]$ (the tiling is checked exactly, in fractions). On a cell, $u$ is one ball. For each $j=0,\dots,6$, every integer between the floors of the lower and of the upper end of $u+jP_1+\tfrac12$ is tried as $\eta_j$, in every combination. In $8$ of the cells two values occur for some $j$ (the sum over the cells of the combinations tried is $1032$), so the true $\eta_j(u)$ is always among those tried, whatever the exact $u$ in the cell and the exact $P_1$ in its ball. For each combination the certificate evaluates $Z_1$ and $N$ in ball arithmetic, which encloses their values for every $u$ in the cell and every choice of the $\gamma_k\in I_k$. It checks that the lower end of $Z_1$ is positive and that the upper end of the ratio $R=N/Z_1$ is below $1$. The largest upper end over all cells and combinations is $R\le0.982921$, in the cell $u\in[0.10742,0.10840]$, so the margin is $1.7\%$ (certified). Figure \ref{fig:window} shows the certified upper bound on each cell against $u$.
+
+*Conclusion.* By Lemma \ref{lem:comb}, a window of $622$ consecutive indices $n\ge1$ cannot have $c_n\ge0$ throughout, and cannot have $c_n\le0$ throughout. So it contains an $n$ with $c_n<0$ and an $n$ with $c_n>0$. A run of one sign of length $622$ would be such a window, so every run has length at most $621$.
 ```{=latex}
 \end{proof}
 ```
 
-Figure \ref{fig:window} shows the certified ratio against $L$.
-
 ```{=latex}
 \begin{figure}[H]\centering
 \definecolor{fgblue}{RGB}{31,90,166}
-\definecolor{fgred}{RGB}{190,40,40}
 \begin{tikzpicture}
-\begin{axis}[width=0.9\textwidth, height=6cm, xmin=1540, xmax=1710, ymin=0.93, ymax=1.02, xlabel={window length $L$}, ylabel={certified ratio},
+\begin{axis}[width=0.9\textwidth, height=6cm, xmin=0, xmax=1, ymin=0.9, ymax=1.02, xlabel={$u$}, ylabel={certified bound on $R$},
   tick label style={font=\scriptsize}, label style={font=\small}, scaled y ticks=false, yticklabel style={/pgf/number format/fixed,/pgf/number format/precision=2}]
-\addplot[domain=1540:1710,gray,thin,dashed] {1};
-\addplot[thin,gray] table[header=false, skip first n=1, x index=0, y index=1] {data/fig1-window-ratio.dat};
-\addplot[only marks,mark=*,mark size=1.4pt,fgblue] table[header=false, skip first n=1, x index=0, y index=1, restrict expr to domain={\thisrowno{2}}{1:1}] {data/fig1-window-ratio.dat};
-\addplot[only marks,mark=*,mark size=1.4pt,fgred] table[header=false, skip first n=1, x index=0, y index=1, restrict expr to domain={\thisrowno{2}}{0:0}] {data/fig1-window-ratio.dat};
-\node[font=\scriptsize,anchor=south west] at (axis cs:1576,1.003) {ratio $=1$};
-\node[font=\scriptsize,fgblue,anchor=south east] at (axis cs:1708,0.958) {$L=1699$: $0.9408$};
-\node[font=\scriptsize,fgblue,anchor=north west] at (axis cs:1573,0.975) {$L=1573$: $0.99838$};
+\addplot[only marks,mark=*,mark size=0.5pt,fgblue] table[header=false, skip first n=1, x index=0, y index=1] {data/fig1-comb-cells.dat};
+\addplot[domain=0:1,gray,thin,dashed] {1};
+\addplot[only marks,mark=o,mark size=2.5pt,red!70!black] coordinates {(0.1079,0.982921)};
+\node[font=\scriptsize,anchor=south west] at (axis cs:0.02,1.003) {ratio $=1$};
+\node[font=\scriptsize,red!70!black,anchor=north west] at (axis cs:0.14,0.97) {maximum $0.982921$};
 \end{axis}
 \end{tikzpicture}
-\caption[Certified ratio against window length]{Theorem A. The certified upper bound of the ratio (right side over left side of the kernel inequality) against the window length $L$. Blue: ratio below $1$, so the window bound holds (under RH). Red: ratio not below $1$, so this kernel certifies nothing. The bound at $L=1573$ is the smallest length tried that certifies.}\label{fig:window}
+\caption[Certified bound against the offset]{Theorem A. The certified upper bound of the ratio $R=N/Z_1$ on each of the $1024$ cells of $u$, for $L=622$. It is below $1$ everywhere (maximum $0.982921$, circled), so every window of $622$ has both signs (under RH).}\label{fig:window}
 \end{figure}
 ```
 
 <!-- audio-description
-Here in Figure {number} we see the certified ratio plotted against the window length L, from 1551 to 1699, with a dashed horizontal line at one. The points fall from 1.015 at L equal to 1551 to 0.94 at L equal to 1699. The ratio falls below one at L equal to 1573, where it is 0.998; below one means certified.
+Here in Figure {number} we see the certified upper bound of the ratio plotted against the offset u from 0 to 1, with a dashed horizontal line at one. The bound stays between about 0.978 and 0.983, nearly flat with a small dip near u equal to 0.45, with its maximum 0.982921 near u equal to 0.108, marked by a circle, and is below one everywhere; below one means certified.
 -->
+
+**Remark (a closed form for runs up to $710$).** With eight troughs ($M=8$) and the weights $a_j=\sin(\pi(j+1)/9)$, $j=0,\dots,7$, rounded down to integers over $2^{50}$, the ratio needs no cover. Put $S=\sum a_j$, $A(\alpha)=\sum_ja_je^{ij\alpha}$ and $\alpha_k=2\pi\theta_k/\theta_1$. Each $|B_k(u)|$ differs from $|A(\alpha_k)|$ by at most $S\theta_k/2$, because $|e^{i\delta\theta_k}-1|\le\theta_k/2$ for $|\delta|\le\tfrac12$, and $Z_1(u)\ge2w_1\cos(\theta_1/2)S$. So for every $u$
+$$
+R(u)\le\frac{WS+\sum_{2\le k\le2000}2w_k\bigl(|A(\alpha_k)|+S\theta_k/2\bigr)}{2w_1\cos(\theta_1/2)S}\le0.97182\quad\text{(certified)},
+$$
+and $8P_1\le710.79\le711$. By Lemma \ref{lem:comb}, every window of $711$ consecutive indices has both signs under RH, so every run has length at most $710$ (computer-assisted, the certificate of Appendix B). This second route is the version that is simplest to check, since it needs one closed form and no cover. For seven troughs the same closed form gives $1.0179$, which is why Theorem A needs the cover.
+
+**Remark (limits of the method).** With seven troughs the window cannot be shorter than $622$ in this argument, since $7P_1=621.937\ldots>621$ (a window of $621$ need not contain seven trough points: the first trough can lie so late that the seventh falls outside, and the lemma requires $L\ge7P_1$); the certificate refuses $L=621$ at the window check. Six troughs fail numerically (floating point: the ratio is about $1.12$ even with weights chosen separately for each $u$; with the sine weights the certified cover fails, see Appendix B). That more zeros do not help is heuristic: in a floating point test, more zeros move the ratio very little.
+
+**Remark (earlier versions).** Versions 1.0 and 1.0.1 of this paper proved the weaker bound $1572$ (windows of $1573$) by a phase-uniform kernel on all $L$ points, with its own certificate. That certificate and its code are archived with the versions (version 1.0.1: doi:10.5281/zenodo.24487613; version 1.0: doi:10.5281/zenodo.24486138) and in the public tags v1.0 and v1.0.1; they are no longer part of this paper.
 
 # Runs of 312 values of both signs under RH
 
@@ -200,7 +226,7 @@ certificate: papers/keiper-li-sign-runs/code/cert_witness_pos312.json, papers/ke
 ```
 In short: a finite computation shows that the sum over the first $300$ zeros has a margin over the tail bound on a window of $312$ at $N_\pm$; a shift by an integer that nearly fixes the phases of those $300$ zeros keeps the margin; and a compactness argument shows that such shifts occur in every block of bounded length.
 
-*Setup.* Put $K=300$, $a_k=2w_k$, $F_K(m)=\sum_{k\le K}a_k\cos(m\theta_k)$ for every integer $m$, and $T_K=C-\sum_{k\le K}a_k$. For $\|t\|_{2\pi}$ the distance from a real $t$ to $2\pi\mathbb{Z}$, $|\cos(u+t)-\cos u|\le\|t\|_{2\pi}$ for all real $u$, since $\cos$ is $1$-Lipschitz and $2\pi$-periodic. By Lemma \ref{lem:zeros} the first $300$ zeros are distinct and simple, so Lemma \ref{lem:tail} (with all $x_k=0$) and Lemma \ref{lem:formula} give, for every integer $m\ge1$,
+*Setup.* Put $K=300$, $a_k=2w_k$, $F_K(m)=\sum_{k\le K}a_k\cos(m\theta_k)$ for every integer $m$, and $T_K=C-\sum_{k\le K}a_k$. For $\|t\|_{2\pi}$ the distance from a real $t$ to $2\pi\mathbb{Z}$, $|\cos(u+t)-\cos u|\le\|t\|_{2\pi}$ for all real $u$, since $\cos$ is $1$-Lipschitz and $2\pi$-periodic. By Lemma \ref{lem:zeros}(b) the first $300$ zeros are distinct and simple, so Lemma \ref{lem:tail} (with all $x_k=0$ and the $300$ listed zeros the first $300$) and Lemma \ref{lem:formula} give, for every integer $m\ge1$,
 $$
 |c_m-F_K(m)|\le T_K.
 $$
@@ -231,7 +257,7 @@ so $\ell-\ell_i\in U$. Put $Q=\max_i|\ell_i|$. Every integer $\ell$ therefore ha
 
 **Remark 1 (the density constant).** The constant $1/(2Q+1)$ is not explicit. No independence hypothesis is assumed, so $\mathcal{H}$ is not known without an independence hypothesis, and the Haar measure of $\{\Delta<\varepsilon_0\}$ in $\mathcal{H}$ cannot be evaluated.
 
-**Remark 2 (maximal runs).** By Theorem A every run has length at most $1572$. A maximal run of length $l\ge312$ contains at most $l-311\le1261$ elements of $S_+$ (starts of positive blocks of $312$), and every element of $S_+$ lies in such a run. So the starts of maximal positive runs of length at least $312$ have lower density at least $1/(1261(2Q+1))$, and the same holds for negative runs. In particular there are infinitely many maximal runs of length at least $312$ of each sign.
+**Remark 2 (maximal runs).** By Theorem A every run has length at most $621$. A maximal run of length $l\ge312$ contains at most $l-311\le310$ elements of $S_+$ (starts of positive blocks of $312$), and every element of $S_+$ lies in such a run. So the starts of maximal positive runs of length at least $312$ have lower density at least $1/(310(2Q+1))$, and the same holds for negative runs. In particular there are infinitely many maximal runs of length at least $312$ of each sign.
 
 **The witnesses.** The integers $N_\pm$ were found by a lattice search in the manner of Odlyzko and te Riele [24], who used lattice reduction [25] to find integers at which the first zeros have nearly prescribed phases (for the Mertens conjecture). Here the first $300$ zeros are used, and the target phases for the negative run are those of the positive run shifted by $\pi$. The search is not part of the proof: the proof uses only the two integers and the certificate above, which is run independently of the search code.
 
@@ -277,23 +303,23 @@ The phase vectors $x$ are stored in the certificates as exact dyadic rationals. 
 \definecolor{fgblue}{RGB}{31,90,166}
 \definecolor{fgred}{RGB}{190,40,40}
 \begin{tikzpicture}
-\begin{axis}[width=0.92\textwidth, height=6.4cm, xmin=0, xmax=1500, ymin=150, ymax=1750, xlabel={number of zeros $K$}, ylabel={run length},
+\begin{axis}[width=0.92\textwidth, height=6.4cm, xmin=0, xmax=1500, ymin=150, ymax=700, xlabel={number of zeros $K$}, ylabel={run length},
   tick label style={font=\scriptsize}, label style={font=\small}, scaled y ticks=false]
-\addplot[domain=0:1500,fgred,dashed] {1572};
+\addplot[domain=0:1500,fgred,dashed] {621};
 \addplot[domain=0:1500,gray,dashed] {312};
 \addplot[only marks,mark=*,mark size=1.5pt,fgblue] table[header=false, skip first n=1, x index=0, y index=1] {data/fig2-run-length.dat};
 \addplot[only marks,mark=o,mark size=1.5pt,gray] table[header=false, skip first n=1, x index=0, y index=3] {data/fig2-run-length.dat};
-\node[font=\scriptsize,fgred,anchor=north east] at (axis cs:1490,1560) {$1572$: Theorem A, RH (upper bound for every run)};
+\node[font=\scriptsize,fgred,anchor=north east] at (axis cs:1490,612) {$621$: Theorem A, RH (upper bound for every run)};
 \node[font=\scriptsize,gray,anchor=north east,inner sep=2pt] at (axis cs:1490,300) {$312$: Theorem B, RH};
 \node[font=\scriptsize,fgblue,anchor=south east] at (axis cs:1490,500) {$476$ at $K=1400$};
 \end{axis}
 \end{tikzpicture}
-\caption[Run length against the number of zeros]{Run lengths against the number of zeros $K$. Blue dots: certified run length $L(K)$ of the run with margin over $T_K$; the rows $K=700$ ($392$) and $K=1400$ ($476$) are the two cases of Theorem C, each under RH and LI$_\theta(K)$; the other blue dots are certified the same way but not stated as theorems. They are lower bounds of the torus supremum, found by a numerical search. Open circles: the longest run of the $K$-term model without the tail allowance (search value, floating point). Dashed lines: $312$ (Theorem B, RH) and $1572$ (Theorem A, RH).}\label{fig:runs}
+\caption[Run length against the number of zeros]{Run lengths against the number of zeros $K$. Blue dots: certified run length $L(K)$ of the run with margin over $T_K$; the rows $K=700$ ($392$) and $K=1400$ ($476$) are the two cases of Theorem C, each under RH and LI$_\theta(K)$; the other blue dots are certified the same way but not stated as theorems. They are lower bounds of the torus supremum, found by a numerical search. Open circles: the longest run of the $K$-term model without the tail allowance (search value, floating point). Dashed lines: $312$ (Theorem B, RH) and $621$ (Theorem A, RH).}\label{fig:runs}
 \end{figure}
 ```
 
 <!-- audio-description
-Here in Figure {number} we see run length plotted against the number of zeros K, from 100 to 1400. Blue dots rise from 208 at K equal to 100 to 476 at K equal to 1400, with 392 at K equal to 700. A grey dashed line at 312 touches the blue dot at K equal to 300, lies above the dots for smaller K and below the dots for larger K, and a red dashed line at 1572 lies far above all of them; the gap between 476 and 1572 is the open range.
+Here in Figure {number} we see run length plotted against the number of zeros K, from 100 to 1400. Blue dots rise from 208 at K equal to 100 to 476 at K equal to 1400, with 392 at K equal to 700. A grey dashed line at 312 touches the blue dot at K equal to 300, lies above the dots for smaller K and below the dots for larger K, and a red dashed line at 621 lies above all of them; the gap between 476 and 621 is the open range.
 -->
 
 ```{=latex}
@@ -417,34 +443,35 @@ Here in Figure {number} we see eight horizontal marks, one per row, along an axi
 
 # Remarks
 
-**The gap.** Under RH, runs of one sign have length at most $1572$ (Theorem A), and runs of $312$ values of each sign recur (Theorem B). Under RH and LI$_\theta(1400)$, runs of $476$ recur (Theorem C). We do not know the true maximal run length. A possible route to Theorem C without LI$_\theta$ is an explicit Kronecker-Weyl theorem that needs no independence hypothesis, as in Bailleul [19] (we have not pursued this). More zeros, or a kernel that tests two zeros at once, might lower the window bound below $1573$ (we have not tried this).
+**The gap.** Under RH, runs of one sign have length between $312$ and $621$: runs of $312$ values of each sign recur (Theorem B), and none is longer than $621$ (Theorem A), so the open range is $[312,621]$. Under RH and LI$_\theta(1400)$, runs of $476$ recur (Theorem C), so the open range there is $[476,621]$. We do not know the true maximal run length. A possible route to Theorem C without LI$_\theta$ is an explicit Kronecker-Weyl theorem that needs no independence hypothesis, as in Bailleul [19] (we have not pursued this). The limits of this method are in the remark after Theorem A.
 
 **What the density says.** Under the hypotheses of Theorem D, the sign changes are slightly rarer than the $\theta_1/\pi\approx1/44.4$ of the lowest frequency alone, by about $3\%$.
 
 **Status of LI$_\theta$.** Hypotheses of this kind appear in work on prime number races and Chebyshev's bias [13, 14], where the independence concerns the $\gamma_k$ themselves (see [14, §1 and §2]). Those papers are not used in any proof here. We do not claim any relation between the two hypotheses.
 
-**Prior art.** The search of the note [7] (see [7] for the sources examined) found no result on the sign pattern of $c_n$ beyond Keiper's bound [1] and Xiao's conjecture [2], refuted in [7]; for this paper we found none that bounds runs of $c_n$ or computes the density of its sign changes, to our knowledge. We make no claim of novelty for the method: a torus model of an almost periodic sum, Weyl equidistribution, and a Fourier computation are classical in spirit, and Feuerverger and Martin [14] compute such densities numerically, with stated error estimates, under the generalized Riemann hypothesis (GRH) and the linear independence of the ordinates $\gamma_k$ (LI, the plain independence over $\mathbb{Q}$, unlike $\mathrm{LI}_\theta$ above). We found no Kac-Rice result for sampled sequences. The continuous-time analogue of a bounded run length is Haraux [15, Thm 2.1], see Theorem A. For the sign changes of $\psi(x)-x$ ($\psi$ the Chebyshev function), a zero sum with a rate above the lowest frequency, see [17, 18]: Grześkowiak, Kaczorowski, Pańkowski and Radziejewski show, with $\gamma_1$ the first ordinate, $\liminf V(T)/\log T\ge\gamma_1/\pi+1/60$ for the number $V(T)$ of sign changes of $\psi(x)-x$ up to $T$, and Morrill, Platt and Trudgian give a bound of the same form. The setting there is continuous and the rate is above the lowest frequency; here it is a discrete sequence and the rate found is below it. We claim no novelty for the method of Theorem B. The search for long runs is the scheme Odlyzko and te Riele [24] used to disprove the Mertens conjecture: LLL reduction [25] finds an integer at which the first zeros have nearly prescribed phases, and a certified evaluation with a bound on the remaining zeros turns it into a witness. To our knowledge it has not been applied to the Keiper-Li coefficients, and we found no earlier bound on the length of sign runs of $c_n$.
+**Prior art.** The search of the note [7] (see [7] for the sources examined) found no result on the sign pattern of $c_n$ beyond Keiper's bound [1] and Xiao's conjecture [2], refuted in [7]; for this paper we found none that bounds runs of $c_n$ or computes the density of its sign changes, to our knowledge. We make no claim of novelty for the method: a torus model of an almost periodic sum, Weyl equidistribution, and a Fourier computation are classical in spirit, and Feuerverger and Martin [14] compute such densities numerically, with stated error estimates, under the generalized Riemann hypothesis (GRH) and the linear independence of the ordinates $\gamma_k$ (LI, the plain independence over $\mathbb{Q}$, unlike $\mathrm{LI}_\theta$ above). We found no Kac-Rice result for sampled sequences. The continuous-time analogue of a bounded run length is Haraux [15, Thm 2.1 and Thm 3.1], see Theorem A. For the sign changes of $\psi(x)-x$ ($\psi$ the Chebyshev function), a zero sum with a rate above the lowest frequency, see [17, 18]: Grześkowiak, Kaczorowski, Pańkowski and Radziejewski show, with $\gamma_1$ the first ordinate, $\liminf V(T)/\log T\ge\gamma_1/\pi+1/60$ for the number $V(T)$ of sign changes of $\psi(x)-x$ up to $T$, and Morrill, Platt and Trudgian give a bound of the same form. The setting there is continuous and the rate is above the lowest frequency; here it is a discrete sequence and the rate found is below it. The method of Theorem A is a standard positive test-function argument: a nonnegative combination of values of a sequence assumed one-signed, placed at the troughs of the first zero so that its term keeps its sign, with the other zeros bounded through the transfer function of the comb. The continuous-time version for almost periodic functions with a frequency gap is Haraux [15, Thm 3.1]; Haraux [15] attributes the technique to Ingham. We claim no novelty for the method of Theorem A. As far as we found, the explicit bound $621$ is new, as is any finite explicit bound for sign runs of the Keiper-Li coefficients or their differences. We claim no novelty for the method of Theorem B. The search for long runs is the scheme Odlyzko and te Riele [24] used to disprove the Mertens conjecture: LLL reduction [25] finds an integer at which the first zeros have nearly prescribed phases, and a certified evaluation with a bound on the remaining zeros turns it into a witness. To our knowledge it has not been applied to the Keiper-Li coefficients, and we found no earlier bound on the length of sign runs of $c_n$.
 
 
 # Code and data {-}
 
-The code, the zero list and all certificate files are public at <https://github.com/mik-tf/keiper-li-sign-runs> and archived on Zenodo, <https://doi.org/10.5281/zenodo.24486137> (concept DOI, all versions). Appendix B explains how to reproduce each certificate; the search code that found the witnesses of Theorem B and the phases of Theorem C is archived with it (Appendix B), and it is not part of any proof.
+The code, the zero list and all certificate files (including the comb certificates of Theorem A and their float cross-check) are public at <https://github.com/mik-tf/keiper-li-sign-runs> and archived on Zenodo, <https://doi.org/10.5281/zenodo.24486137> (concept DOI, all versions). Appendix B explains how to reproduce each certificate; the search code that found the witnesses of Theorem B and the phases of Theorem C is archived with it (Appendix B), and it is not part of any proof.
 
 # Use of AI {-}
 
-Claude Opus 5.5 and Claude Sonnet 5.5 (Anthropic) were used in November 2026 for exploratory computation, in which the main results were first found, for the lattice search and the certificate for Theorem B, and for checking, literature search and drafting.
+Claude Opus 5.5 and Claude Sonnet 5.5 (Anthropic) were used in November 2026 for exploratory computation, in which the main results were first found, for the lattice search, the comb certificate for Theorem A and its float cross-check, and the certificate for Theorem B, and for checking, literature search and drafting.
 
 # Appendix A: proofs {-}
 
 Throughout, RH holds, $\theta_k,w_k,C$ are as in Section 1, and sums over zeros count multiplicity.
 
 ```{=latex}
-\begin{lemma}[kernel inequality]\label{lem:kernel}
+\begin{lemma}[comb inequality]\label{lem:comb}
 ```
-Assume RH. Let $h\ge1$, $K_d=K_{-d}\ge0$ for $|d|\le h$, $\tilde k(\varphi)=\sum_{|d|\le h}K_de^{id\varphi}$ (real, even), and $M\ge h+1$. If $c_n\ge0$ for $|n-M|\le h$, or $c_n\le0$ for $|n-M|\le h$, then, with $\rho_1$ the first zero (simple, Lemma \ref{lem:zeros}),
+Assume RH. Let $\gamma_1,\dots,\gamma_K$ ($K\ge2$) be ordinates of zeros, one in each of $K$ pairwise disjoint intervals of $(0,\infty)$ (so they are distinct), with $\theta_k,w_k$ as in Section 1, and put $W=C-2\sum_{k\le K}w_k$. Let $M\ge1$, let $a_0,\dots,a_{M-1}\ge0$ with $S=\sum_ja_j>0$, let $P_1=2\pi/\theta_1$, and let $L$ be an integer with $L\ge MP_1$. For $u\in[0,1]$ put $\eta_j(u)=\lfloor u+jP_1+\tfrac12\rfloor$, $\delta_j(u)=\eta_j(u)-u-jP_1\in(-\tfrac12,\tfrac12]$, and
 $$
-w_1\tilde k(0)\le\sum_{\gamma>0}2m_\gamma w_\gamma|\tilde k(\theta_\gamma)|+\sum_{\gamma>0,\ \gamma\ne\gamma_1}m_\gamma w_\gamma|\tilde k(\theta_\gamma-\theta_1)|+\sum_{\gamma>0}m_\gamma w_\gamma|\tilde k(\theta_\gamma+\theta_1)|.
+Z_1(u)=2w_1\sum_ja_j\cos(\delta_j\theta_1),\qquad B_k(u)=\sum_ja_je^{i\eta_j(u)\theta_k},\qquad N(u)=WS+\sum_{2\le k\le K}2w_k|B_k(u)|.
 $$
+If $N(u)<Z_1(u)$ for every $u\in[0,1]$, then every window of $L$ consecutive indices $n\ge1$ contains an $n$ with $c_n>0$ and an $n$ with $c_n<0$.
 
 ```{=latex}
 \end{lemma}
@@ -460,25 +487,27 @@ label: CONDITIONAL
 ```{=latex}
 \begin{proof}
 ```
-Take $c_n\ge0$ (the other case is the same with $-c_n$). By Lemma \ref{lem:formula}, $c_n=\sum_{\gamma>0}m_\gamma w_\gamma(e^{in\theta_\gamma}+e^{-in\theta_\gamma})$. Put $S=\sum_dK_dc_{M+d}e^{i(M+d)\theta_1}$. Then
+Fix $n_0\ge1$ and the window $n_0,\dots,n_0+L-1$. Suppose first that $c_n\ge0$ throughout it (case P), and in the second case that $c_n\le0$ throughout (case N). The troughs of $t\mapsto\cos(t\theta_1)$ are $t=(m+\tfrac12)P_1$, and its crests are $t=mP_1$, $m\in\mathbb{Z}$. The half-open interval $[n_0-\tfrac12,n_0+L-\tfrac12)$ has length $L$. In case P let $t'$ be its first trough, in case N its first crest. Then $t'<n_0-\tfrac12+P_1$, so $t_j=t'+jP_1$ ($0\le j<M$) satisfies $t_j<n_0-\tfrac12+MP_1\le n_0+L-\tfrac12$, and every $t_j$ lies in the interval. Put $n_j=\lfloor t_j+\tfrac12\rfloor$; then $n_0\le n_j\le n_0+L-1$, so $n_j\ge1$. (The condition $L\ge MP_1$ cannot be weakened in this argument: $t'$ comes arbitrarily close to $n_0-\tfrac12+P_1$ as $n_0$ varies, because $P_1$ is irrational.) With $u=t'-\lfloor t'\rfloor\in[0,1)$ we get $n_j=\lfloor t'\rfloor+\eta_j(u)$, and $\delta_j=n_j-t_j$.
+
+By Lemma \ref{lem:formula}, $c_n=\sum_{\gamma>0}2m_\gamma w_\gamma\cos(n\theta_\gamma)$. Split this into the listed zeros, each counted once, and the remainder $R_n$ of Lemma \ref{lem:tail} (with all phases $0$), so $|R_n|\le W$. Then
 $$
-S=\sum_{\gamma>0}m_\gamma w_\gamma\bigl[e^{iM(\theta_\gamma+\theta_1)}\tilde k(\theta_\gamma+\theta_1)+e^{iM(\theta_1-\theta_\gamma)}\tilde k(\theta_1-\theta_\gamma)\bigr].
+\sum_ja_jc_{n_j}=\sum_{k\le K}2w_k\sum_ja_j\cos(n_j\theta_k)+\sum_ja_jR_{n_j}.
 $$
-The term $\gamma=\gamma_1$ of the second kind is $w_1\tilde k(0)$, of modulus $w_1\tilde k(0)$, so $|S|\ge w_1\tilde k(0)-(\text{the other two sums})$. Since $K_d\ge0$ and $c_{M+d}\ge0$, $|S|\le\sum_dK_dc_{M+d}=\sum_{\gamma>0}2m_\gamma w_\gamma\cos(M\theta_\gamma)\tilde k(\theta_\gamma)\le\sum2m_\gamma w_\gamma|\tilde k(\theta_\gamma)|$. Combining the two bounds gives the inequality.
+For $k=1$: $n_j\theta_1=t_j\theta_1+\delta_j\theta_1$, and $t_j\theta_1$ is an odd multiple of $\pi$ in case P and an even multiple in case N. So $\sum_ja_j\cos(n_j\theta_1)=\mp\sum_ja_j\cos(\delta_j\theta_1)$ (upper sign in case P), and the term of $k=1$ equals $\mp Z_1(u)$. For $k\ge2$: $\sum_ja_j\cos(n_j\theta_k)=\mathrm{Re}\bigl(e^{i\lfloor t'\rfloor\theta_k}B_k(u)\bigr)$, and $|\mathrm{Re}(e^{ix}B)|\le|B|$ for every real $x$, so no information on the phase $\lfloor t'\rfloor\theta_k$ is needed. The remainder contributes at most $WS$. Hence $|\sum_ja_jc_{n_j}\pm Z_1(u)|\le N(u)$. In case P, $c_{n_j}\ge0$ gives $0\le-Z_1(u)+N(u)$, which contradicts $N(u)<Z_1(u)$. In case N, $c_{n_j}\le0$ gives $0\ge Z_1(u)-N(u)$, the same contradiction. So the window has some $c_n<0$ and some $c_n>0$.
 ```{=latex}
 \end{proof}
 ```
 
-**The inequality verified for Theorem A.** The certificate verifies, in ball arithmetic, that
-$$
-w_1\tilde k(0)>2\sum_{k\le2000}w_k|\tilde k(\theta_k)|+\sum_{2\le k\le2000}w_k|\tilde k(\theta_k-\theta_1)|+\sum_{k\le2000}w_k|\tilde k(\theta_k+\theta_1)|+W\,\tilde k(0)(1+\mu_{\mathrm{arc}})
-$$
-for the stored integer kernel, where $W=C-2\sum_{k\le2000}w_k$ is the total weight $2\sum m w$ of the zeros above $T$ (an identity by Lemmas \ref{lem:formula} and \ref{lem:zeros}), and $\mu_{\mathrm{arc}}\ge\sup|\tilde k|/\tilde k(0)$ on the arc $[-\theta_T-\theta_1,\theta_T-\theta_1]$, $\theta_T=2\arctan\frac1{2T}$, which contains $\theta_\gamma-\theta_1$ and, by evenness, $-(\theta_\gamma+\theta_1)$ for every unlisted $\gamma$. For unlisted zeros, $|\tilde k|\le\tilde k(0)$ (as $K_d\ge0$) bounds the first sum by $W\tilde k(0)$, and the other two by $\tfrac{W}{2}\mu_{\mathrm{arc}}\tilde k(0)$ each. The bound $\mu_{\mathrm{arc}}$ comes from a grid of arc centres (spacing about $5\cdot10^{-6}$) plus the Lipschitz estimate $|\tilde k'|\le h\tilde k(0)$, so $\sup$ over a cell is at most the value at its centre plus $h\cdot(\text{cell radius})\cdot\tilde k(0)$. The inequality contradicts Lemma \ref{lem:kernel}, so no window has a one-signed $c_n$. The kernel was found by linear programming in floating point, then rounded to integers over $2^{50}$; only the exact rationals enter the certificate.
+Lemma \ref{lem:formula} holds for every $n\ge1$, and the only constraint used above is $n_j\ge n_0\ge1$, so no threshold or table of small $n$ is needed.
 
 ```{=latex}
 \begin{lemma}[tail, uniform in phases]\label{lem:tail}
 ```
-Assume RH, and that $\theta_1,\dots,\theta_K$ belong to $K$ distinct simple zeros. Then for every real phase $x_\gamma$ and every integer $n$, $\bigl|\sum_{\gamma\text{ not among these }K\text{ zeros}}2m_\gamma w_\gamma\cos(n\theta_\gamma+x_\gamma)\bigr|\le T_K=C-\sum_{k\le K}2w_k$.
+Assume RH. Let $I_1,\dots,I_K$ be pairwise disjoint intervals in $(0,\infty)$, each containing at least one ordinate of a zero. Choose one such ordinate $\gamma_k$ in each $I_k$ (the listed zeros; they are distinct). For every choice of real phases $x_\gamma$ and every integer $n$, put
+$$
+R_n=\sum_{\gamma>0}2m_\gamma w_\gamma\cos(n\theta_\gamma+x_\gamma)-\sum_{k\le K}2w_{\gamma_k}\cos(n\theta_{\gamma_k}+x_{\gamma_k}).
+$$
+Then $|R_n|\le T_K=C-\sum_{k\le K}2w_{\gamma_k}$. If $\gamma_1,\dots,\gamma_K$ are the first $K$ ordinates and all are simple, $R_n$ is the sum over the zeros beyond these $K$.
 
 ```{=latex}
 \end{lemma}
@@ -494,7 +523,7 @@ label: CONDITIONAL
 ```{=latex}
 \begin{proof}
 ```
-Each term has modulus at most $2m_\gamma w_\gamma$, and $\sum_{\gamma>0}2m_\gamma w_\gamma=C$ (Lemma \ref{lem:formula}). The $K$ listed zeros carry $\sum_{k\le K}2w_k$ of it, so the rest carries $T_K$. A missing zero would only move weight into the tail; the listed zeros must be distinct.
+Write $m_k=m_{\gamma_k}\ge1$. Then $R_n=\sum_{\gamma\text{ not listed}}2m_\gamma w_\gamma\cos(n\theta_\gamma+x_\gamma)+\sum_{k\le K}2(m_k-1)w_{\gamma_k}\cos(n\theta_{\gamma_k}+x_{\gamma_k})$. Each cosine has modulus at most $1$, so $|R_n|\le\sum_{\gamma\text{ not listed}}2m_\gamma w_\gamma+\sum_{k\le K}2(m_k-1)w_{\gamma_k}$. By Lemma \ref{lem:formula}, $\sum_{\gamma>0}2m_\gamma w_\gamma=C$, and the listed zeros carry $\sum_{k\le K}2m_kw_{\gamma_k}$ of it, so the right side equals $C-\sum_{k\le K}2m_kw_{\gamma_k}+\sum_{k\le K}2(m_k-1)w_{\gamma_k}=C-\sum_{k\le K}2w_{\gamma_k}=T_K$. The listed zeros must be distinct, which the disjointness of the intervals gives; extra copies of a listed zero and extra zeros inside an interval stay in the remainder.
 ```{=latex}
 \end{proof}
 ```
@@ -540,7 +569,7 @@ label: CONDITIONAL
 ```{=latex}
 \begin{proof}
 ```
-Because $\pi,\theta_1,\dots,\theta_K$ are independent over $\mathbb{Q}$, the sequence $(M\theta_1,\dots,M\theta_K)$ mod $2\pi$ is equidistributed on the $K$-torus (Weyl [6, Satz 4, p. 319, via Satz 3 and Satz 1]). A box is a continuity set, so Weyl's theorem gives the density of $\{M:M\theta\in B\}$ directly, and it equals the Haar measure of $B$, which is $(2r/2\pi)^K=(r/\pi)^K$. For such $M$, $c_{M+j}=F_{M\theta}(j)+\epsilon$ with $|\epsilon|\le T_K$ by Lemma \ref{lem:formula} and Lemma \ref{lem:tail}, and $F_{M\theta}(j)>T_K$, so $c_{M+j}>0$.
+Because $\pi,\theta_1,\dots,\theta_K$ are independent over $\mathbb{Q}$, the sequence $(M\theta_1,\dots,M\theta_K)$ mod $2\pi$ is equidistributed on the $K$-torus (Weyl [6, Satz 4, p. 319, via Satz 3 and Satz 1]). A box is a continuity set, so Weyl's theorem gives the density of $\{M:M\theta\in B\}$ directly, and it equals the Haar measure of $B$, which is $(2r/2\pi)^K=(r/\pi)^K$. For such $M$, $c_{M+j}=F_{M\theta}(j)+\epsilon$ with $|\epsilon|\le T_K$ by Lemma \ref{lem:formula} and Lemma \ref{lem:tail} (the $K$ listed zeros are the first $K$ and are simple, Lemma \ref{lem:zeros}(b)), and $F_{M\theta}(j)>T_K$, so $c_{M+j}>0$.
 ```{=latex}
 \end{proof}
 ```
@@ -661,7 +690,7 @@ label: CONDITIONAL
 ```{=latex}
 \begin{proof}
 ```
-By Lemma \ref{lem:zeros} every zero beyond the list has $\gamma>T$, and $w$ is decreasing, so $a_k=2w_k\le A$. Zeros are simple, so $\sum_{k>2000}a_k=T_{2000}$ by Lemma \ref{lem:formula}. Then $\sum a_k^2g_k\le AG\sum a_k$. Without simplicity this fails: a zero of multiplicity $m$ contributes $m\cdot2w$ to $\sum a_k$ and up to $(2mw)^2$ to $\sum a_k^2$.
+By Lemma \ref{lem:zeros}(b) every zero beyond the list has $\gamma>T$, and $w$ is decreasing, so $a_k=2w_k\le A$. Zeros are simple, so $\sum_{k>2000}a_k=T_{2000}$ by Lemma \ref{lem:formula}. Then $\sum a_k^2g_k\le AG\sum a_k$. Without simplicity this fails: a zero of multiplicity $m$ contributes $m\cdot2w$ to $\sum a_k$ and up to $(2mw)^2$ to $\sum a_k^2$.
 ```{=latex}
 \end{proof}
 ```
@@ -713,23 +742,22 @@ Python $3.12$ with python-flint $0.9.0$ (Arb, $128$-bit balls), numpy $2.5.5$, s
 \begingroup\raggedright
 
 - Zeros: `python3 $P/zeros.py 2000 OUT/z2000.json` (about $33$ s). Certificate file: `z2000.json`.
-- Theorem A: `python3 $P/certify.py $P/z2000.json 1699 --outdir OUT` (about $2$ minutes per $L$; also $L=1573$). Certificate files: `cert_L1699.json`, `cert_L1573.json`.
+- Theorem A: `python3 $P/certify_comb.py $P/z2000.json 622 7 $P/weights_622.json OUT/cert_comb_622.json` and, for the closed form of the remark after Theorem A, `python3 $P/certify_comb.py $P/z2000.json 711 8 sine OUT/cert_comb_711.json` (about $90$ s each, measured on a $32$-core Linux server when unloaded; peak memory $32$ MB). The script rechecks the signs of $Z$ at $\mu_k\pm2^{-20}$ for all $2000$ zeros and exits with an error message unless every check passes. Certificate files: `cert_comb_622.json`, `cert_comb_711.json`.
 - Theorem B: `python3 $P/certify_witness.py $P $P/witness_pos312.txt 300 312 1 OUT/cert_witness_pos312.json` and `python3 $P/certify_witness.py $P $P/witness_neg312.txt 300 312 -1 OUT/cert_witness_neg312.json` (about $90$ s each). Certificate files: `cert_witness_pos312.json`, `cert_witness_neg312.json`.
 - Theorem C: `python3 $P/certify_run.py $P/z2000.json $P/torus_results.json OUT` (about $15$ s for the whole table). Certificate files: `cert_run_pos_K700.json`, `cert_run_pos_K1400.json`, `summary.json`.
 - Theorems D and D$'$: `python3 $P/certify_density.py $P/z2000.json OUT/density_results.json --workers 16 --floatcheck $P` (about $2$ minutes on $16$ workers; $16$ GB of memory). Certificate file: `density_results.json`.
 - Johansson's table counts: `python3 $P/table_sign_changes.py TABLE OUT/table_sign_changes.json`, with `TABLE` the table of [21] (not archived here).
-- Window cross-check: `python3 $P/crosscheck_window.py $P --json OUT/crosscheck_window.json` (about $6$ s).
 - Search code (optional, not part of any proof): `code/search/` holds the lattice search that found the two witnesses of Theorem B (about $3$ to $4$ CPU hours each; see `code/search/README.md`), and `code/search/torus/` the phase search of Theorem C (see its `README.md`).
 - Figure data: `python3 $P/make_figure_data.py` reads only the archived files, and recomputes no certified number.
 
 \endgroup
 
-The runs were made on a $32$-core Linux server. The archived files differ from a re-run only in timing fields (checked for the Theorem A certificate for $L=1573$ and the $K=700$ row of Theorem C). The script `certify.py` does not read the kernel from the archive: it re-solves the linear program for the kernel (HiGHS through scipy) and rounds to integers over $2^{50}$, as in Appendix A. A different solver build could give a slightly different kernel and a slightly different ratio in the last digits, but any kernel it certifies is valid, since only the integers enter the certificate; the archived `cert_L*.json` files carry the numerators.
+The runs were made on a $32$-core Linux server. The archived files differ from a re-run only in timing fields (checked for the $K=700$ row of Theorem C; a re-run of the Theorem A certificates reproduces every decision number). The weights of Theorem A are read from `weights_622.json` (the seven integers over $2^{50}$ of the proof), or built by the script from the sine rule; any nonnegative vector is valid, so how they were found does not matter.
 
-**Cross-checks.** Two separately written implementations re-checked the window certificates. They share the inequality and the tail argument with the main certificate, so they are checks of the implementation, not independent proofs.
+**Cross-checks.** The following are checks of the implementation and of the numbers, not independent proofs.
 
-1. An mpmath interval implementation with its own zero list re-checked both window certificates. It reproduces both: the ratios are $0.940423$ for $L=1699$ and $0.998057$ for $L=1573$, against the archived $0.940769$ and $0.998376$. The difference comes from its finer arc grid for the bound on the unlisted zeros, so the archived values are the more conservative. Its zeros and its zero count come from mpmath floating point and are not proof grade.
-2. The script `code/crosscheck_window.py` does not import `certify.py`. It re-verifies each of the $2000$ zeros by a sign change of the Hardy function $Z$ at $\gamma\pm10^{-20}$ (its own half-width; the zero list of Lemma \ref{lem:zeros} uses $\pm2^{-20}$), in Arb ball arithmetic at $128$ bits, and uses its own arc grid. It shares with the main certificate the kernel (the numerators read from `cert_L*.json`) and Arb's `zeta_nzeros` count of the zeros up to $T$, which the paper trusts. Its certified ratios, read from `code/crosscheck_window.json` and rounded up at the digits shown, are $0.940453254649$ for $L=1699$ and $0.998084532485$ for $L=1573$, against the archived $0.9407685236$ and $0.9983759146$. Command: `python3 $P/crosscheck_window.py $P --json OUT/crosscheck_window.json` (about $6$ s).
+1. A separately written floating point program (numpy; it reads only the stored midpoints and the weights, and shares no cell logic with the certificate) computes the supremum of $R$ over $u$ exactly: between two breakpoints of the integers $\eta_j(u)$, every $|B_k|$ is constant and $Z_1$ is concave and positive, so $R$ attains its supremum at an endpoint of a piece. It gives $0.982890$ at $u=0.10749$ for $L=622$ against the certified $0.9829201$, and $0.971817$ for the closed form of the remark after Theorem A against the certified $0.971820$. Each certified value is slightly above the float value, as an enclosure must be. For seven troughs the closed form is $1.01789$ (certified $1.017892$), which is why the cover is used for $L=622$.
+2. Three inputs that must fail do fail, with an error message. $L=621$ with seven troughs stops at the window check ($7P_1\approx621.94>621$: a window of $621$ need not contain seven trough points, so the hypothesis $L\ge7P_1$ fails). Six troughs with sine weights, $L=534$, fail in the cover: the closed form is $1.169$, and the bisection of the cells stops with $20$ failing cells, the first at $u=0$ with $R\approx1.13$. Moving one stored midpoint by $2^{-10}$ stops at the sign check of $Z$. In the floating point program, six troughs give about $1.13$ for the sine weights and about $1.12$ with weights chosen for each $u$ (numerical).
 
 # References {-}
 
@@ -761,7 +789,7 @@ The runs were made on a $32$-core Linux server. The archived files differ from a
 
 [14] A. Feuerverger and G. Martin, *Biases in the Shanks-Rényi prime number race*, Experiment. Math. 9 (2000), no. 4, 535-570. arXiv:math/9910184
 
-[15] A. Haraux, *Uniform oscillation properties of almost periodic functions*, arXiv:2610.06515 (5 Oct 2026), Theorem 2.1.
+[15] A. Haraux, *Uniform oscillation properties of almost periodic functions*, arXiv:2610.06515 (5 Oct 2026), Theorem 2.1 and Theorem 3.1.
 
 [16] NIST Digital Library of Mathematical Functions, section 10.9(i), equation (10.9.1). https://dlmf.nist.gov/10.9
 

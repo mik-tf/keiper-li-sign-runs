@@ -6,11 +6,11 @@ Claim certified (CONDITIONAL ON RH): c_m has the stated sign for every integer m
   (paper Lemma 1: c_m = F(m) for m >= 1; under RH every zero is gamma = Im rho).
 Method (python-flint balls):
   1. zeros: z2000.json midpoints re-verified by Hardy Z sign change at mid +- 1e-20 (prec 128), intervals
-     disjoint, count N(T)=2000 by Arb zeta_nzeros (as crosscheck_window.py). Then zeros 1..K are recomputed
+     disjoint, count N(T)=2000 by Arb zeta_nzeros (paper Lemma 2, zero list). Then zeros 1..K are recomputed
      at high precision with acb.zeta_zero(k) and each ball must lie inside [mid-eps, mid+eps] of the same index.
   2. explicit sum F_K(m) = sum_{k<=K} 2 w_k cos(m theta_k), m an exact integer, balls at prec ~ 3.33(log10 M + 40) bits.
   3. tail: T_K = C - sum_{k<=K} 2 w_k, C = 2 + gammaE - log(4 pi) = sum of ALL 2w (multiplicity included)
-     (paper identity, Appendix A / crosscheck_window.py 'tail'); |sum_{k>K} 2 w cos| <= T_K.
+     (paper identity, Appendix A, lemma on the tail); |sum_{k>K} 2 w cos| <= T_K.
   4. sign: positive run needs lower(F_K(m)) - upper(T_K) > 0; negative needs -upper(F_K(m)) - upper(T_K) > 0.
   5. F4 (W3 review): for every zero used, Hardy Z changes sign between the two endpoints of its zeta_zero ball
      (widened by 4 ulps), evaluated at the working precision + 160 bits; so only zeta, lgamma, zeta_nzeros are trusted, not zeta_zero.
