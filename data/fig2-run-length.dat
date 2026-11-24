@@ -1,0 +1,13 @@
+# K L_certified L_search L_truncated_model sign (L_certified nan if not certified; L_search is a search lower bound)
+100 208 208 315 -1
+100 208 208 315 1
+150 224 224 325 1
+200 232 232 330 1
+250 304 304 398 1
+300 312 312 407 -1
+300 312 312 407 1
+400 320 320 415 1
+500 324 324 477 1
+700 392 392 487 1
+1000 412 412 495 1
+1400 476 476 500 1

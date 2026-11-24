@@ -1,0 +1,35 @@
+{
+  "upload_type": "publication",
+  "publication_type": "article",
+  "title": "Sign runs and the density of sign changes of Keiper-Li second differences",
+  "creators": [
+    {
+      "name": "Perreault, Michaël"
+    }
+  ],
+  "description": "<p>Let c<sub>n</sub> = &lambda;<sub>n+1</sub> &minus; 2&lambda;<sub>n</sub> + &lambda;<sub>n&minus;1</sub> be the second differences of the Keiper-Li coefficients &lambda;<sub>n</sub>. It is known that c<sub>n</sub> changes sign infinitely often. We study how long a run of one sign can be and how often the sign changes; all results are conditional. Assuming the Riemann hypothesis, every window of 1573 consecutive indices contains both signs, so runs have length at most 1572, and there are runs of at least 312 consecutive values of each sign, of positive lower density (computer-assisted). Assuming in addition a linear independence hypothesis on the zero angles, there are runs of 392 and of 476 consecutive values; and the sign changes have a density whose ratio to &theta;<sub>1</sub>/&pi; lies in [0.969481285147, 0.971027176735]. The constants are verified in ball arithmetic and the code is public.</p>",
+  "keywords": [
+    "Keiper-Li coefficients",
+    "Li's criterion",
+    "Riemann hypothesis",
+    "second differences",
+    "sign runs",
+    "interval arithmetic",
+    "computer-assisted proof"
+  ],
+  "license": "cc-by-4.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/mik-tf/keiper-li-sign-runs",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.24447746",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    }
+  ],
+  "version": "1.0"
+}

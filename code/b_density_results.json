@@ -1,0 +1,71 @@
+{
+ "definition": "delta_K/(theta_1/pi), K=100, LI_theta torus model, a_k=2/(1/4+g_k^2)",
+ "fourier": {
+  "ratio": 0.970254230941,
+  "ratio_lo": 0.9702542308997885,
+  "ratio_hi": 0.9702542309819412,
+  "width": 8.2e-11,
+  "delta": 0.02184073538202504,
+  "tail_bound_P": 7.19e-16,
+  "fp_allowance_P_max": 1.28e-12,
+  "box": {
+   "Smax": 22781.25,
+   "Tmax": 759375.0
+  },
+  "lattice_factors_checked": [
+   0.3,
+   0.5,
+   0.8
+  ],
+  "ratio_same_to_12_digits": true
+ },
+ "mc": {
+  "K": 100,
+  "N": 10000000,
+  "seed": 20261122,
+  "delta": 0.0218226,
+  "ratio": 0.9694485835653647,
+  "se_ratio": 0.002052486676341432
+ },
+ "mc_inside_bracket": "no: the bracket (width 8e-11 numeric, 6e-4 with the heuristic tail band) is far narrower than the MC standard error 2.05e-3; MC is 0.39 sigma below the centre",
+ "mc_minus_fourier_in_sigma": -0.39252258488296116,
+ "K_dependence": [
+  {
+   "K": 30,
+   "ratio": 0.971504032587465
+  },
+  {
+   "K": 300,
+   "ratio": 0.970125812871926
+  },
+  {
+   "K": 1000,
+   "ratio": 0.9701124591324997
+  }
+ ],
+ "tail_zeros_heuristic": {
+  "shift_ratio_K100_to_inf": -0.00014,
+  "band": [
+   -0.0005,
+   0.0001
+  ],
+  "label": "heuristic"
+ },
+ "data": {
+  "S_1e5": 2173,
+  "theta1_N_over_pi": 2251.0,
+  "ratio": 0.9653,
+  "source": "what-we-found.md, Johansson table (not recomputed here)"
+ },
+ "envelope_check_max_pi_x_J0sq_over2": 0.9999999999871416,
+ "machine": "local desktop, nice 10, python3+numpy+scipy",
+ "bracket_K100_numeric": [
+  0.9702542309,
+  0.97025423098
+ ],
+ "bracket_K100_with_heuristic_tail_band_for_K_inf": [
+  0.96975,
+  0.97036
+ ],
+ "verdict": "pass on width (<=1%); containment of MC not meaningful at this width, consistent at 0.4 sigma"
+}

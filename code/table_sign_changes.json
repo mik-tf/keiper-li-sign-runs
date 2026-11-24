@@ -1,0 +1,95 @@
+{
+ "label": "CHECKED NUMERICALLY (finite range), not certified",
+ "source": "Johansson 20-digit lambda_n table, lines k=1..100000, value lambda_k/k (values not stored)",
+ "definition": "S(N) = #{n in [2,N]: sign c_n != sign c_{n-1}}, c_n for n=1..99999",
+ "theta1_over_pi": 0.0225103222285,
+ "thmD_bracket": [
+  0.969481285147,
+  0.971027176735
+ ],
+ "rows": [
+  {
+   "N_requested": 1000,
+   "N_used": 1000,
+   "S": 21,
+   "bound": 22.510322228499998,
+   "ratio": 0.9329053483477993,
+   "tail_range": [
+    500,
+    1000
+   ],
+   "S_tail": 12,
+   "tail_ratio": 1.0661775409689134,
+   "tail_ratio_in_thmD_bracket": false,
+   "n_uncertain_signs": 0
+  },
+  {
+   "N_requested": 3000,
+   "N_used": 3000,
+   "S": 66,
+   "bound": 67.5309666855,
+   "ratio": 0.9773294125548372,
+   "tail_range": [
+    1500,
+    3000
+   ],
+   "S_tail": 34,
+   "tail_ratio": 1.0069454553595292,
+   "tail_ratio_in_thmD_bracket": false,
+   "n_uncertain_signs": 0
+  },
+  {
+   "N_requested": 10000,
+   "N_used": 10000,
+   "S": 223,
+   "bound": 225.103222285,
+   "ratio": 0.9906566318169487,
+   "tail_range": [
+    5000,
+    10000
+   ],
+   "S_tail": 113,
+   "tail_ratio": 1.0039838510790602,
+   "tail_ratio_in_thmD_bracket": false,
+   "n_uncertain_signs": 0
+  },
+  {
+   "N_requested": 30000,
+   "N_used": 30000,
+   "S": 664,
+   "bound": 675.3096668549999,
+   "ratio": 0.9832526211157757,
+   "tail_range": [
+    15000,
+    30000
+   ],
+   "S_tail": 329,
+   "tail_ratio": 0.9743678082743682,
+   "tail_ratio_in_thmD_bracket": false,
+   "n_uncertain_signs": 0
+  },
+  {
+   "N_requested": 100000,
+   "N_used": 99999,
+   "S": 2173,
+   "bound": 2251.0097125277716,
+   "ratio": 0.9653445686646236,
+   "tail_range": [
+    49999,
+    99999
+   ],
+   "S_tail": 1072,
+   "tail_ratio": 0.9524519365988959,
+   "tail_ratio_in_thmD_bracket": false,
+   "n_uncertain_signs": 0
+  }
+ ],
+ "precision": {
+  "model": "worst-case rounding of 20 significant digits: half-ulp(l_{n+1})+2 half-ulp(l_n)+half-ulp(l_{n-1})",
+  "uncertain_n": [],
+  "n_zero_c": 0,
+  "min_abs_c_over_err": 19376289.072599992,
+  "argmin_n": 99208,
+  "max_err": 1.99998e-14
+ }
+}

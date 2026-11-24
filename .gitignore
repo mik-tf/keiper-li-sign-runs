@@ -1,0 +1,17 @@
+# LaTeX build debris
+*.aux
+*.log
+*.out.tex
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+*.tex
+# local outputs of the reproduction commands
+out/
+__pycache__/

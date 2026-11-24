@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Sign runs and the density of sign changes of Keiper-Li second differences"
+type: software
+authors:
+  - family-names: Perreault
+    given-names: Michaël
+version: "1.0"
+date-released: "2026-11-23"
+license: CC-BY-4.0
+repository-code: "https://github.com/mik-tf/keiper-li-sign-runs"
+keywords:
+  - Keiper-Li coefficients
+  - Li's criterion
+  - Riemann hypothesis
+  - sign runs
+  - interval arithmetic
+  - computer-assisted proof
