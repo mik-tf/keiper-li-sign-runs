@@ -2,7 +2,7 @@
 
 Author: Michaël Perreault
 
-DOI: added in v1.0.1
+DOI: [10.5281/zenodo.24486137](https://doi.org/10.5281/zenodo.24486137) (all versions; v1.0 is [10.5281/zenodo.24486138](https://doi.org/10.5281/zenodo.24486138))
 
 Let lambda_n be the Keiper-Li coefficients and c_n = lambda_(n+1) - 2 lambda_n + lambda_(n-1) their second differences. It is known unconditionally that c_n changes sign infinitely often. This paper asks how long a run of one sign can be and how often the sign changes. Every result is conditional; the conditions are stated with each result.
 
@@ -42,4 +42,4 @@ What each one certifies: `zeros.py` the zero list; `certify.py` Theorem A (about
 
 ## Cite as
 
-Perreault, M. Sign runs and the density of sign changes of Keiper-Li second differences, version 1.0. https://github.com/mik-tf/keiper-li-sign-runs (DOI: added in v1.0.1). See [CITATION.cff](CITATION.cff).
+Perreault, M. Sign runs and the density of sign changes of Keiper-Li second differences, version 1.0. https://github.com/mik-tf/keiper-li-sign-runs (DOI: [10.5281/zenodo.24486137](https://doi.org/10.5281/zenodo.24486137) (all versions; v1.0 is [10.5281/zenodo.24486138](https://doi.org/10.5281/zenodo.24486138))). See [CITATION.cff](CITATION.cff).

@@ -428,7 +428,7 @@ Here in Figure {number} we see eight horizontal marks, one per row, along an axi
 
 # Code and data {-}
 
-The code, the zero list and all certificate files are public at <https://github.com/mik-tf/keiper-li-sign-runs> and will be archived on Zenodo. Appendix B explains how to reproduce each certificate; the search code that found the witnesses of Theorem B and the phases of Theorem C is archived with it (Appendix B), and it is not part of any proof.
+The code, the zero list and all certificate files are public at <https://github.com/mik-tf/keiper-li-sign-runs> and archived on Zenodo, <https://doi.org/10.5281/zenodo.24486137> (concept DOI, all versions). Appendix B explains how to reproduce each certificate; the search code that found the witnesses of Theorem B and the phases of Theorem C is archived with it (Appendix B), and it is not part of any proof.
 
 # Use of AI {-}
 
@@ -708,7 +708,7 @@ Hence $\delta/(\theta_1/\pi)\in\frac{2\kappa}{\theta_1/\pi}\,[\Sigma_0-E-\mathca
 
 # Appendix B: reproduction {-}
 
-Python $3.12$ with python-flint $0.9.0$ (Arb, $128$-bit balls), numpy $2.5.5$, scipy $1.18.1$. The code and certificate files are public at <https://github.com/mik-tf/keiper-li-sign-runs> and will be archived on Zenodo. Scripts and archives are in `code/`; the commands below are run from the repository root, with `P=code` set in the shell, and each writes to a directory given on the command line.
+Python $3.12$ with python-flint $0.9.0$ (Arb, $128$-bit balls), numpy $2.5.5$, scipy $1.18.1$. The code and certificate files are public at <https://github.com/mik-tf/keiper-li-sign-runs> and archived on Zenodo, <https://doi.org/10.5281/zenodo.24486137>. Scripts and archives are in `code/`; the commands below are run from the repository root, with `P=code` set in the shell, and each writes to a directory given on the command line.
 
 \begingroup\raggedright
 
