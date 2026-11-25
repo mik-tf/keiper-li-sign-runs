@@ -1,0 +1,12 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "KeiperComb.N622.theoremA'_622_numerics",
+    "KeiperComb.N622.theoremA'_622_runs_numerics",
+    "KeiperComb.N711.theoremA'_711_numerics"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "external_kernels": {"nanoda": ["nanoda_bin"]}
+}

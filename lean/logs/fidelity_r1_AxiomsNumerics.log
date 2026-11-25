@@ -1,0 +1,68 @@
+
+
+⚠ [18320/18369] Replayed KeiperComb.Comb
+warning: KeiperComb/Comb.lean:226:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: KeiperComb/Comb.lean:61:33: Variable name `hS` is not explicitly referenced.
+
+
+ℹ [18324/18369] Replayed KeiperComb.Numerics622Assembly
+ℹ [18326/18369] Replayed KeiperComb.Numerics711C00
+ℹ [18328/18369] Replayed KeiperComb.Numerics711C01
+ℹ [18330/18369] Replayed KeiperComb.Numerics711C02
+ℹ [18332/18369] Replayed KeiperComb.Numerics711C03
+ℹ [18334/18369] Replayed KeiperComb.Numerics711C04
+ℹ [18336/18369] Replayed KeiperComb.Numerics711C05
+ℹ [18338/18369] Replayed KeiperComb.Numerics711C06
+ℹ [18340/18369] Replayed KeiperComb.Numerics711C07
+ℹ [18342/18369] Replayed KeiperComb.Numerics711C08
+ℹ [18344/18369] Replayed KeiperComb.Numerics711C09
+ℹ [18346/18369] Replayed KeiperComb.Numerics711C10
+ℹ [18348/18369] Replayed KeiperComb.Numerics711C11
+ℹ [18350/18369] Replayed KeiperComb.Numerics711C12
+ℹ [18352/18369] Replayed KeiperComb.Numerics711C13
+ℹ [18354/18369] Replayed KeiperComb.Numerics711C14
+ℹ [18356/18369] Replayed KeiperComb.Numerics711C15
+ℹ [18358/18369] Replayed KeiperComb.Numerics711C16
+ℹ [18360/18369] Replayed KeiperComb.Numerics711C17
+ℹ [18362/18369] Replayed KeiperComb.Numerics711C18
+ℹ [18364/18369] Replayed KeiperComb.Numerics711Assembly
+ℹ [18368/18369] Built KeiperComb.AxiomsNumerics (24s)
+Build completed successfully (18369 jobs).
+	Command being timed: "nice -n 19 timeout 3000 lake build KeiperComb.AxiomsNumerics"
+	User time (seconds): 30.48
+	System time (seconds): 10.94
+	Percent of CPU this job got: 57%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:11.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6692068
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 12
+	Minor (reclaiming a frame) page faults: 449460
+	Voluntary context switches: 117931
+	Involuntary context switches: 110993
+	Swaps: 0
+	File system inputs: 2808
+	File system outputs: 14248
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+exit=0
+info: KeiperComb/Numerics622Assembly.lean:448:0: 'KeiperComb.N622.theoremA'_622_numerics' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: KeiperComb/Numerics622Assembly.lean:449:0: 'KeiperComb.N622.theoremA'_622_runs_numerics' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: KeiperComb/Numerics711Assembly.lean:438:0: 'KeiperComb.N711.theoremA'_711_numerics' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: KeiperComb/AxiomsNumerics.lean:5:0: 'KeiperComb.N622.intervalsOrdered' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: KeiperComb/AxiomsNumerics.lean:6:0: 'KeiperComb.N622.theoremA'_622_numerics' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: KeiperComb/AxiomsNumerics.lean:7:0: 'KeiperComb.N622.theoremA'_622_runs_numerics' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: KeiperComb/AxiomsNumerics.lean:8:0: 'KeiperComb.N711.intervalsOrdered' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: KeiperComb/AxiomsNumerics.lean:9:0: 'KeiperComb.N711.theoremA'_711_numerics' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,745 @@
+Resolving dependencies
+Building Challenge
+⚠ [18250/18252] Built Challenge (154s)
+warning: Challenge.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: Challenge.lean:144:8: declaration uses `sorry`
+warning: Challenge.lean:151:8: declaration uses `sorry`
+warning: Challenge.lean:250:8: declaration uses `sorry`
+⚠ [18251/18252] Ran Challenge:irArts
+warning: Challenge.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (18252 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, KeiperComb.N622.theoremA'_622_numerics, KeiperComb.N622.theoremA'_622_runs_numerics, KeiperComb.N711.theoremA'_711_numerics, propext, Classical.choice, Quot.sound, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+⚠ [18256/18368] Replayed KeiperComb.Defs
+warning: KeiperComb/Defs.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18257/18368] Ran KeiperComb.Defs:irArts
+warning: KeiperComb/Defs.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [18258/18368] Replayed KeiperComb.Tail
+warning: KeiperComb/Tail.lean:23:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: KeiperComb/Tail.lean:23:33: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Tail.lean:127:6: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: KeiperComb/Tail.lean:220:52: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [18262/18368] Replayed KeiperComb.Numerics711Glue
+warning: KeiperComb/Numerics711Glue.lean:20:44: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: KeiperComb/Numerics711Glue.lean:20:40: Unused tactic linter: `<;>` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics711Glue.lean:20:44: Unused tactic linter: `ring` is never executed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics711Glue.lean:36:30: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: KeiperComb/Numerics711Glue.lean:38:23: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: KeiperComb/Numerics711Glue.lean:40:23: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+⚠ [18266/18368] Replayed KeiperComb.Numerics711Sound2
+warning: KeiperComb/Numerics711Sound2.lean:60:59: Unused tactic linter: there are no goals left for `try ring`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ℹ [18274/18368] Replayed KeiperComb.Numerics622C00
+info: KeiperComb/Numerics622C00.lean:31:0: 'KeiperComb.N622.C00.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18276/18368] Replayed KeiperComb.Numerics622C01
+info: KeiperComb/Numerics622C01.lean:31:0: 'KeiperComb.N622.C01.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18278/18368] Replayed KeiperComb.Numerics622C02
+info: KeiperComb/Numerics622C02.lean:31:0: 'KeiperComb.N622.C02.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18280/18368] Replayed KeiperComb.Numerics622C03
+info: KeiperComb/Numerics622C03.lean:31:0: 'KeiperComb.N622.C03.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18282/18368] Replayed KeiperComb.Numerics622C04
+info: KeiperComb/Numerics622C04.lean:31:0: 'KeiperComb.N622.C04.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18284/18368] Replayed KeiperComb.Numerics622C05
+info: KeiperComb/Numerics622C05.lean:31:0: 'KeiperComb.N622.C05.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18286/18368] Replayed KeiperComb.Numerics622C06
+info: KeiperComb/Numerics622C06.lean:31:0: 'KeiperComb.N622.C06.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18288/18368] Replayed KeiperComb.Numerics622C07
+info: KeiperComb/Numerics622C07.lean:31:0: 'KeiperComb.N622.C07.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18290/18368] Replayed KeiperComb.Numerics622C08
+info: KeiperComb/Numerics622C08.lean:31:0: 'KeiperComb.N622.C08.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18292/18368] Replayed KeiperComb.Numerics622C09
+info: KeiperComb/Numerics622C09.lean:31:0: 'KeiperComb.N622.C09.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18294/18368] Replayed KeiperComb.Numerics622C10
+info: KeiperComb/Numerics622C10.lean:31:0: 'KeiperComb.N622.C10.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18296/18368] Replayed KeiperComb.Numerics622C11
+info: KeiperComb/Numerics622C11.lean:31:0: 'KeiperComb.N622.C11.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18298/18368] Replayed KeiperComb.Numerics622C12
+info: KeiperComb/Numerics622C12.lean:31:0: 'KeiperComb.N622.C12.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18300/18368] Replayed KeiperComb.Numerics622C13
+info: KeiperComb/Numerics622C13.lean:31:0: 'KeiperComb.N622.C13.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18302/18368] Replayed KeiperComb.Numerics622C14
+info: KeiperComb/Numerics622C14.lean:31:0: 'KeiperComb.N622.C14.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18304/18368] Replayed KeiperComb.Numerics622C15
+info: KeiperComb/Numerics622C15.lean:31:0: 'KeiperComb.N622.C15.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18306/18368] Replayed KeiperComb.Numerics622C16
+info: KeiperComb/Numerics622C16.lean:31:0: 'KeiperComb.N622.C16.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18308/18368] Replayed KeiperComb.Numerics622C17
+info: KeiperComb/Numerics622C17.lean:31:0: 'KeiperComb.N622.C17.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18310/18368] Replayed KeiperComb.Numerics622C18
+info: KeiperComb/Numerics622C18.lean:31:0: 'KeiperComb.N622.C18.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [18314/18368] Replayed KeiperComb.Numerics711Chain
+warning: KeiperComb/Numerics711Chain.lean:45:57: Variable name `hP2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:46:19: Variable name `hu1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:48:6: Unused tactic linter: `push Not at *` does not change the goal.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics711Chain.lean:51:57: Variable name `hP2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:52:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:54:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics711Chain.lean:58:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:58:33: Variable name `n0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:60:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics711Chain.lean:63:23: Variable name `hP1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:64:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:64:19: Variable name `hu1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:64:33: Variable name `n0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:64:64: Variable name `n1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:66:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics711Chain.lean:69:57: Variable name `hP2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:70:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:70:19: Variable name `hu1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:70:33: Variable name `n0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:70:64: Variable name `n1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:70:95: Variable name `n2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:72:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics711Chain.lean:75:23: Variable name `hP1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:76:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:76:19: Variable name `hu1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:76:33: Variable name `n0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:76:64: Variable name `n1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:76:95: Variable name `n2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:76:127: Variable name `n3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:78:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics711Chain.lean:81:57: Variable name `hP2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:82:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:82:19: Variable name `hu1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:82:33: Variable name `n0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:82:64: Variable name `n1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:82:95: Variable name `n2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:82:127: Variable name `n3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:82:150: Variable name `n4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:84:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics711Chain.lean:88:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:88:33: Variable name `n0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:88:64: Variable name `n1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:88:95: Variable name `n2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:88:127: Variable name `n3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:88:150: Variable name `n4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:88:182: Variable name `n5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:90:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics711Chain.lean:93:23: Variable name `hP1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:94:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:94:33: Variable name `n0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:94:64: Variable name `n1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:94:95: Variable name `n2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:94:127: Variable name `n3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:94:150: Variable name `n4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:94:182: Variable name `n5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:94:211: Variable name `n6` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n6
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics711Chain.lean:96:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [18316/18368] Replayed KeiperComb.Numerics622Chain
+warning: KeiperComb/Numerics622Chain.lean:11:57: Variable name `hP2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:12:19: Variable name `hu1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:14:6: Unused tactic linter: `push Not at *` does not change the goal.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics622Chain.lean:17:57: Variable name `hP2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:18:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:20:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics622Chain.lean:24:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:24:33: Variable name `n0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:26:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics622Chain.lean:29:23: Variable name `hP1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:30:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:30:19: Variable name `hu1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:30:33: Variable name `n0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:30:64: Variable name `n1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:32:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics622Chain.lean:35:57: Variable name `hP2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:36:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:36:19: Variable name `hu1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:36:33: Variable name `n0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:36:64: Variable name `n1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:36:95: Variable name `n2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:38:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics622Chain.lean:41:57: Variable name `hP2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:42:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:42:19: Variable name `hu1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:42:33: Variable name `n0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:42:64: Variable name `n1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:42:95: Variable name `n2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:42:127: Variable name `n3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:44:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics622Chain.lean:47:23: Variable name `hP1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:48:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:48:33: Variable name `n0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:48:64: Variable name `n1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:48:95: Variable name `n2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:48:127: Variable name `n3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:48:150: Variable name `n4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:50:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics622Chain.lean:53:23: Variable name `hP1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:54:5: Variable name `hu0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:54:33: Variable name `n0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:54:64: Variable name `n1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:54:95: Variable name `n2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:54:127: Variable name `n3` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n3
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:54:150: Variable name `n4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:54:179: Variable name `n5` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n5
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: KeiperComb/Numerics622Chain.lean:56:2: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [18318/18368] Replayed KeiperComb.Numerics711Tail
+warning: KeiperComb/Numerics711Tail.lean:30:85: Unused tactic linter: there are no goals left for `try ring`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics711Tail.lean:31:81: Unused tactic linter: `try` can be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: KeiperComb/Numerics711Tail.lean:65:29: Unused tactic linter: there are no goals left for `try ring`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [18320/18368] Replayed KeiperComb.Comb
+warning: KeiperComb/Comb.lean:226:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: KeiperComb/Comb.lean:61:33: Variable name `hS` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hS
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ℹ [18324/18368] Replayed KeiperComb.Numerics622Assembly
+info: KeiperComb/Numerics622Assembly.lean:448:0: 'KeiperComb.N622.theoremA'_622_numerics' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: KeiperComb/Numerics622Assembly.lean:449:0: 'KeiperComb.N622.theoremA'_622_runs_numerics' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18326/18368] Replayed KeiperComb.Numerics711C00
+info: KeiperComb/Numerics711C00.lean:32:0: 'KeiperComb.N711.C00.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18328/18368] Replayed KeiperComb.Numerics711C01
+info: KeiperComb/Numerics711C01.lean:32:0: 'KeiperComb.N711.C01.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18330/18368] Replayed KeiperComb.Numerics711C02
+info: KeiperComb/Numerics711C02.lean:32:0: 'KeiperComb.N711.C02.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18332/18368] Replayed KeiperComb.Numerics711C03
+info: KeiperComb/Numerics711C03.lean:32:0: 'KeiperComb.N711.C03.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18334/18368] Replayed KeiperComb.Numerics711C04
+info: KeiperComb/Numerics711C04.lean:32:0: 'KeiperComb.N711.C04.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18336/18368] Replayed KeiperComb.Numerics711C05
+info: KeiperComb/Numerics711C05.lean:32:0: 'KeiperComb.N711.C05.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18338/18368] Replayed KeiperComb.Numerics711C06
+info: KeiperComb/Numerics711C06.lean:32:0: 'KeiperComb.N711.C06.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18340/18368] Replayed KeiperComb.Numerics711C07
+info: KeiperComb/Numerics711C07.lean:32:0: 'KeiperComb.N711.C07.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18342/18368] Replayed KeiperComb.Numerics711C08
+info: KeiperComb/Numerics711C08.lean:32:0: 'KeiperComb.N711.C08.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18344/18368] Replayed KeiperComb.Numerics711C09
+info: KeiperComb/Numerics711C09.lean:32:0: 'KeiperComb.N711.C09.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18346/18368] Replayed KeiperComb.Numerics711C10
+info: KeiperComb/Numerics711C10.lean:32:0: 'KeiperComb.N711.C10.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18348/18368] Replayed KeiperComb.Numerics711C11
+info: KeiperComb/Numerics711C11.lean:32:0: 'KeiperComb.N711.C11.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18350/18368] Replayed KeiperComb.Numerics711C12
+info: KeiperComb/Numerics711C12.lean:32:0: 'KeiperComb.N711.C12.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18352/18368] Replayed KeiperComb.Numerics711C13
+info: KeiperComb/Numerics711C13.lean:32:0: 'KeiperComb.N711.C13.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18354/18368] Replayed KeiperComb.Numerics711C14
+info: KeiperComb/Numerics711C14.lean:32:0: 'KeiperComb.N711.C14.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18356/18368] Replayed KeiperComb.Numerics711C15
+info: KeiperComb/Numerics711C15.lean:32:0: 'KeiperComb.N711.C15.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18358/18368] Replayed KeiperComb.Numerics711C16
+info: KeiperComb/Numerics711C16.lean:32:0: 'KeiperComb.N711.C16.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18360/18368] Replayed KeiperComb.Numerics711C17
+info: KeiperComb/Numerics711C17.lean:32:0: 'KeiperComb.N711.C17.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18362/18368] Replayed KeiperComb.Numerics711C18
+info: KeiperComb/Numerics711C18.lean:32:0: 'KeiperComb.N711.C18.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [18364/18368] Replayed KeiperComb.Numerics711Assembly
+info: KeiperComb/Numerics711Assembly.lean:438:0: 'KeiperComb.N711.theoremA'_711_numerics' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [18366/18368] Built Solution (53s)
+Build completed successfully (18368 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, KeiperComb.N622.theoremA'_622_numerics, KeiperComb.N622.theoremA'_622_runs_numerics, KeiperComb.N711.theoremA'_711_numerics, propext, Classical.choice, Quot.sound, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!

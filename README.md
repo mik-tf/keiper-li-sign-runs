@@ -6,7 +6,7 @@ DOI: [10.5281/zenodo.24486137](https://doi.org/10.5281/zenodo.24486137) (all ver
 
 Let lambda_n be the Keiper-Li coefficients and c_n = lambda_(n+1) - 2 lambda_n + lambda_(n-1) their second differences. It is known unconditionally that c_n changes sign infinitely often. This paper asks how long a run of one sign can be and how often the sign changes. Every result is conditional; the conditions are stated with each result.
 
-- **A.** Assuming the Riemann hypothesis (RH), every window of 622 consecutive indices contains both a positive and a negative c_n, so no run of one sign is longer than 621. (Versions 1.0 and 1.0.1 proved 1572.)
+- **A.** Assuming the Riemann hypothesis (RH), every window of 622 consecutive indices contains both a positive and a negative c_n, so no run of one sign is longer than 621. (Versions 1.0 and 1.0.1 proved 1572.) Since version 1.2, the deduction of this theorem from RH, Li's formula and the certified zero intervals is also checked in Lean 4, see `lean/README.md`.
 - **B.** Assuming RH, there are runs of at least 312 consecutive values of each sign (positive and negative), and they have positive lower density. Computer-assisted: two explicit witnesses are certified in ball arithmetic.
 - **C.** Assuming RH and a linear independence hypothesis on the angles of the first 700 zeros, runs of 392 consecutive values of each sign occur with positive lower density; with the first 1400 zeros, runs of 476.
 - **D.** Assuming RH and the independence of pi and all the angles over the rationals, the sign changes of c_n have a density, and its ratio to theta_1/pi lies in [0.969481285147, 0.971027176735], in particular below 1.
@@ -42,4 +42,4 @@ What each one certifies: `zeros.py` the zero list; the two `certify_comb.py` run
 
 ## Cite as
 
-Perreault, M. Sign runs and the density of sign changes of Keiper-Li second differences, version 1.1. https://github.com/mik-tf/keiper-li-sign-runs (DOI: [10.5281/zenodo.24486137](https://doi.org/10.5281/zenodo.24486137) (all versions; v1.0 is [10.5281/zenodo.24486138](https://doi.org/10.5281/zenodo.24486138))). See [CITATION.cff](CITATION.cff).
+Perreault, M. Sign runs and the density of sign changes of Keiper-Li second differences, version 1.2. https://github.com/mik-tf/keiper-li-sign-runs (DOI: [10.5281/zenodo.24486137](https://doi.org/10.5281/zenodo.24486137) (all versions; v1.0 is [10.5281/zenodo.24486138](https://doi.org/10.5281/zenodo.24486138))). See [CITATION.cff](CITATION.cff).
