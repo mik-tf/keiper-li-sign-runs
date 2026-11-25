@@ -460,7 +460,7 @@ The code, the zero list and all certificate files (including the comb certificat
 
 # Use of AI {-}
 
-Claude Opus 5.5 and Claude Sonnet 5.5 (Anthropic) were used in November 2026 for exploratory computation, in which the main results were first found, for the lattice search, the comb certificate for Theorem A and its float cross-check, and the certificate for Theorem B, for the Lean 4 formalisation of the deduction of Theorem A, and for checking, literature search and drafting.
+Claude Opus 5.5 and Claude Sonnet 5.5 (Anthropic) were used in November 2026, under the author's direction, for exploratory computation, derivations, code, checks, literature search and drafting.
 
 # Appendix A: proofs {-}
 
