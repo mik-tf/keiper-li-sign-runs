@@ -42,4 +42,4 @@ What each one certifies: `zeros.py` the zero list; the two `certify_comb.py` run
 
 ## Cite as
 
-Perreault, M. Sign runs and the density of sign changes of Keiper-Li second differences, version 1.2.1. https://github.com/mik-tf/keiper-li-sign-runs (DOI: [10.5281/zenodo.24486137](https://doi.org/10.5281/zenodo.24486137) (all versions; v1.0 is [10.5281/zenodo.24486138](https://doi.org/10.5281/zenodo.24486138))). See [CITATION.cff](CITATION.cff).
+Perreault, M. Sign runs and the density of sign changes of Keiper-Li second differences, version 1.2.2. https://github.com/mik-tf/keiper-li-sign-runs (DOI: [10.5281/zenodo.24486137](https://doi.org/10.5281/zenodo.24486137) (all versions; v1.0 is [10.5281/zenodo.24486138](https://doi.org/10.5281/zenodo.24486138))). See [CITATION.cff](CITATION.cff).

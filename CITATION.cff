@@ -5,9 +5,11 @@ type: software
 authors:
   - family-names: Perreault
     given-names: Michaël
-version: "1.2.1"
+    orcid: "https://orcid.org/0009-0003-0017-7658"
+    affiliation: "Independent researcher"
+version: "1.2.2"
 doi: "10.5281/zenodo.24486137"
-date-released: "2026-11-24"
+date-released: "2026-11-27"
 license: CC-BY-4.0
 repository-code: "https://github.com/mik-tf/keiper-li-sign-runs"
 keywords:
